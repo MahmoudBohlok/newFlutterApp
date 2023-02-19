@@ -9,6 +9,7 @@ class Images {
 
 }
 class ImagesSvg {
+  static const String Customer_Survey = 'assets/svg/Customer Survey.svg';
 
 
 }class IconSvg {

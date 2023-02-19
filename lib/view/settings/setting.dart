@@ -19,10 +19,8 @@ class Folders extends StatefulWidget {
 class _Folders extends State<Folders> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final _tabs = [
-    Tab(child: CustomText(text:'اخر الخدمات' ,fontFamily: "f400",fontSize: 12,)),
-    Tab(child: CustomText(text:'الخدمات المفضله' ,fontFamily: "f300",fontSize: 11,)),
+    Tab(child: CustomText(text:'التقارير' ,fontFamily: "f300",fontSize: 12,)),
     Tab(child: CustomText(text:'الاعدادات' ,fontFamily: "f400",fontSize: 12,)),
-
   ];
 
   @override
@@ -131,7 +129,6 @@ class _Folders extends State<Folders> with SingleTickerProviderStateMixin {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               child: TabBar(
-                                isScrollable: true,
                                 controller: _tabController,
                                 indicator: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8.0),

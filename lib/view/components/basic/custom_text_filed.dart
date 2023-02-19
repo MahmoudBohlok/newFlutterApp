@@ -8,6 +8,7 @@ class CustomeTextFiled extends StatelessWidget {
   final String hint;
 
   final Icon? prefixicon;
+  final Icon? subfixicon;
   final TextEditingController controller;
    double? fontSize;
    double? left=0;
@@ -24,6 +25,7 @@ class CustomeTextFiled extends StatelessWidget {
   CustomeTextFiled(
       {
       this.prefixicon,
+      this.subfixicon,
         this.maxline,
         this.type,
       required this.hint,
@@ -61,6 +63,7 @@ class CustomeTextFiled extends StatelessWidget {
           labelText: hint,
           labelStyle: TextStyle(fontFamily: fontFamily??"f400", fontSize:fontSize??16),
           prefixIcon: prefixicon,
+          suffixIcon: subfixicon,
         ),
       ),
     );
