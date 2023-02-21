@@ -9,23 +9,24 @@ import '../../data/utiles/app_colors.dart';
 import '../components/app_bar/app_bar_widgit.dart';
 import '../components/basic/custom_inkwell.dart';
 import '../components/basic/custom_text_filed.dart';
+import 'edit_ltinerary.dart';
 
-class PersonalProfile extends StatefulWidget {
+class Itinerary extends StatefulWidget {
   static const routeName = 'change_user_password';
 
-  const PersonalProfile({Key? key}) : super(key: key);
+  const Itinerary({Key? key}) : super(key: key);
 
   @override
-  State<PersonalProfile> createState() => _ChangePassWord();
+  State<Itinerary> createState() => _ChangePassWord();
 }
 
-class _ChangePassWord extends State<PersonalProfile> {
+class _ChangePassWord extends State<Itinerary> {
   @override
   void initState() {
     initUserData();
-    _currentPassController.text = "mahmoud";
-    _newPassController.text = "01019819443";
-    _locationController.text = "القاهره";
+    // _currentPassController.text = "القاهره";
+    // _newPassController.text = "الجيزه";
+    // _locationController.text = "10";
     super.initState();
   }
 
@@ -48,13 +49,13 @@ class _ChangePassWord extends State<PersonalProfile> {
             shadowColor: Colors.black12,
             elevation: 0,
             automaticallyImplyLeading: false,
-            flexibleSpace: AppBarWidgitCustom(name: "تعديل البيانات الشخصيه")),
+            flexibleSpace: AppBarWidgitCustom(name: "سجل خط سير طريقك")),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                CustomText(
-                  text: 'اسم المستخدم',
+                const CustomText(
+                  text: 'من',
                   fontSize: 13,
                   top: 30,
                   bottom: 0,
@@ -63,37 +64,18 @@ class _ChangePassWord extends State<PersonalProfile> {
                   alignment: Alignment.centerRight,
                   fontFamily: "f700",
                 ),
-                Row(children: [
-                  Expanded(
-                    flex: 2,
-                    child: CustomeTextFiled(
+              CustomeTextFiled(
                       enabled: name,
                       top: 5,
                       right: 15,
                       left: 15,
-                      hint: 'الاسم',
+                      hint: 'من',
                       controller: _currentPassController,
-                      prefixicon: Icon(Icons.perm_identity_outlined),
+                      prefixicon: Icon(Icons.location_on_outlined),
                     ),
-                  ),
-                  Expanded(
-                      flex: 1,
-                      child: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                              name = !name;
-                            });
-                          },
-                          child: CustomText(
-                            text: "تعديل الاسم",
-                            fontFamily: "f700",
-                            fontSize: 14,
-                            left: 15,
-                            color: AppColors.bottonBackGround,
-                          ))),
-                ]),
-                CustomText(
-                  text: 'رقم الهاتف',
+
+                const CustomText(
+                  text: 'الي',
                   fontSize: 13,
                   top: 30,
                   bottom: 0,
@@ -102,89 +84,66 @@ class _ChangePassWord extends State<PersonalProfile> {
                   alignment: Alignment.centerRight,
                   fontFamily: "f700",
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: CustomeTextFiled(
+               CustomeTextFiled(
                         enabled: phone,
                         top: 5,
                         right: 15,
                         left: 15,
-                        hint: 'رقم الهاتف',
+                        hint: 'الي',
                         controller: _newPassController,
-                        prefixicon: Icon(Icons.phone_android_outlined),
-                      ),
-                    ),
-                    Expanded(
-                        flex: 1,
-                        child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                phone = !phone;
-                              });
-                            },
-                            child: CustomText(
-                              text: "تعديل الهاتف",
-                              fontFamily: "f700",
-                              left: 15,
-                              fontSize: 14,
-                              color: AppColors.bottonBackGround,
-                            ))),
-                  ],
-                ),
-                CustomText(
-                  text: 'العنوان',
-                  fontSize: 13,
-                  top: 30,
-                  bottom: 0,
-                  right: 15,
-                  left: 15,
-                  alignment: Alignment.centerRight,
-                  fontFamily: "f700",
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 2,
-                      child: CustomeTextFiled(
-                        enabled: phone,
-                        top: 5,
-                        right: 15,
-                        left: 15,
-                        hint: 'العنوان',
-                        controller: _locationController,
                         prefixicon: Icon(Icons.location_on_outlined),
                       ),
-                    ),
-                    Expanded(
-                        flex: 1,
-                        child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                location = !location;
-                              });
-                            },
-                            child: CustomText(
-                              text: "تعديل العنوان",
-                              fontFamily: "f700",
-                              left: 15,
-                              fontSize: 14,
-                              color: AppColors.bottonBackGround,
-                            ))),
-                  ],
+
+                const CustomText(
+                  text: 'المبلغ',
+                  fontSize: 13,
+                  top: 30,
+                  bottom: 0,
+                  right: 15,
+                  left: 15,
+                  alignment: Alignment.centerRight,
+                  fontFamily: "f700",
                 ),
+              CustomeTextFiled(
+                        enabled: phone,
+                        top: 5,
+                        right: 15,
+                        left: 15,
+                        hint: 'المبلغ',
+                        controller: _locationController,
+                        prefixicon: Icon(Icons.monetization_on_outlined),
+                      ),
+
                 CustomInkWell(
-                    text: "تعديل الان ",
+                    text: "حفظ",
                     color: AppColors.bottonBackGround,
                     fontColor: AppColors.screenBackGround,
                     fontSize: 20,
                     fontFamily: "f700",
                     right: 40,
                     left: 40,
-                    bottom: 15,
+                    bottom: 40,
                     top: 40,
                     onTap: () {}),
+
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return EditItinerary();
+                    }));
+                  },
+                  child: const CustomText(
+                    text: 'محفوظات خط السير',
+                    fontSize: 15,
+                    top: 30,
+                    bottom: 20,
+                    right: 15,
+                    left: 15,
+                    color: AppColors.colorC0E7D1Green,
+                    alignment: Alignment.center,
+                    fontFamily: "f400",
+                  ),
+                ),
               ],
             ),
           ),

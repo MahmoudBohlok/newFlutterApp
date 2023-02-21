@@ -3,9 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:newflutterapp/view/settings/change_password.dart';
 import 'package:newflutterapp/view/settings/edit_profile.dart';
+import 'package:newflutterapp/view/settings/itinerary.dart';
 import 'package:newflutterapp/view/settings/paymentPass.dart';
 import 'package:newflutterapp/view/settings/personal_profile.dart';
 import 'package:newflutterapp/view/settings/setting.dart';
+import 'package:newflutterapp/view/settings/edit_ltinerary.dart';
+import 'package:newflutterapp/view/settings/transport.dart';
 import 'package:newflutterapp/view/settings/upload_reaset.dart';
 
 import 'data/utiles/app_theme.dart';
@@ -35,8 +38,7 @@ class MyApp extends StatelessWidget {
         builder: (_, ThemeMode currentMode, __) {
           return
             MaterialApp(
-              home: PersonalProfile(),
-
+              home: Transport(),
               theme: themeNotifier.value == ThemeMode.light
                   ? AppThemeStyle.lightTheme
                   :AppThemeStyle.darkTheme,

@@ -10,22 +10,22 @@ import '../components/app_bar/app_bar_widgit.dart';
 import '../components/basic/custom_inkwell.dart';
 import '../components/basic/custom_text_filed.dart';
 
-class PersonalProfile extends StatefulWidget {
+class EditItinerary extends StatefulWidget {
   static const routeName = 'change_user_password';
 
-  const PersonalProfile({Key? key}) : super(key: key);
+  const EditItinerary({Key? key}) : super(key: key);
 
   @override
-  State<PersonalProfile> createState() => _ChangePassWord();
+  State<EditItinerary> createState() => _ChangePassWord();
 }
 
-class _ChangePassWord extends State<PersonalProfile> {
+class _ChangePassWord extends State<EditItinerary> {
   @override
   void initState() {
     initUserData();
-    _currentPassController.text = "mahmoud";
-    _newPassController.text = "01019819443";
-    _locationController.text = "القاهره";
+    _currentPassController.text = "القاهره";
+    _newPassController.text = "الجيزه";
+    _locationController.text = "10";
     super.initState();
   }
 
@@ -48,13 +48,13 @@ class _ChangePassWord extends State<PersonalProfile> {
             shadowColor: Colors.black12,
             elevation: 0,
             automaticallyImplyLeading: false,
-            flexibleSpace: AppBarWidgitCustom(name: "تعديل البيانات الشخصيه")),
+            flexibleSpace: AppBarWidgitCustom(name: "محفوظات خط السير")),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
                 CustomText(
-                  text: 'اسم المستخدم',
+                  text: 'من',
                   fontSize: 13,
                   top: 30,
                   bottom: 0,
@@ -71,9 +71,9 @@ class _ChangePassWord extends State<PersonalProfile> {
                       top: 5,
                       right: 15,
                       left: 15,
-                      hint: 'الاسم',
+                      hint: 'من',
                       controller: _currentPassController,
-                      prefixicon: Icon(Icons.perm_identity_outlined),
+                      prefixicon: Icon(Icons.location_on_outlined),
                     ),
                   ),
                   Expanded(
@@ -85,7 +85,7 @@ class _ChangePassWord extends State<PersonalProfile> {
                             });
                           },
                           child: CustomText(
-                            text: "تعديل الاسم",
+                            text: "تعديل من",
                             fontFamily: "f700",
                             fontSize: 14,
                             left: 15,
@@ -93,7 +93,7 @@ class _ChangePassWord extends State<PersonalProfile> {
                           ))),
                 ]),
                 CustomText(
-                  text: 'رقم الهاتف',
+                  text: 'الي',
                   fontSize: 13,
                   top: 30,
                   bottom: 0,
@@ -111,9 +111,9 @@ class _ChangePassWord extends State<PersonalProfile> {
                         top: 5,
                         right: 15,
                         left: 15,
-                        hint: 'رقم الهاتف',
+                        hint: 'الي',
                         controller: _newPassController,
-                        prefixicon: Icon(Icons.phone_android_outlined),
+                        prefixicon: Icon(Icons.location_on_outlined),
                       ),
                     ),
                     Expanded(
@@ -125,7 +125,7 @@ class _ChangePassWord extends State<PersonalProfile> {
                               });
                             },
                             child: CustomText(
-                              text: "تعديل الهاتف",
+                              text: "تعديل الي",
                               fontFamily: "f700",
                               left: 15,
                               fontSize: 14,
@@ -134,7 +134,7 @@ class _ChangePassWord extends State<PersonalProfile> {
                   ],
                 ),
                 CustomText(
-                  text: 'العنوان',
+                  text: 'المبلغ',
                   fontSize: 13,
                   top: 30,
                   bottom: 0,
@@ -152,9 +152,9 @@ class _ChangePassWord extends State<PersonalProfile> {
                         top: 5,
                         right: 15,
                         left: 15,
-                        hint: 'العنوان',
+                        hint: 'المبلغ',
                         controller: _locationController,
-                        prefixicon: Icon(Icons.location_on_outlined),
+                        prefixicon: Icon(Icons.monetization_on_outlined),
                       ),
                     ),
                     Expanded(
@@ -166,7 +166,7 @@ class _ChangePassWord extends State<PersonalProfile> {
                               });
                             },
                             child: CustomText(
-                              text: "تعديل العنوان",
+                              text: "تعديل المبلغ",
                               fontFamily: "f700",
                               left: 15,
                               fontSize: 14,
