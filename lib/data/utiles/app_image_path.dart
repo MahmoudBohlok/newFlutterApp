@@ -10,6 +10,9 @@ class Images {
 }
 class ImagesSvg {
   static const String Customer_Survey = 'assets/svg/Customer Survey.svg';
+  static const String Credit_card = 'assets/onbording/Credit card-amico.svg';
+  static const String Credit_card_bro = 'assets/onbording/Credit card-bro.svg';
+  static const String Payment_information = 'assets/onbording/Payment_information.svg';
 
 
 }class IconSvg {

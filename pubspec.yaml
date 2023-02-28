@@ -68,6 +68,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   path_provider: ^2.0.11
   audioplayers: ^3.0.1
+  onboarding: ^3.1.0
   flutter_staggered_grid_view: ^0.6.2
   toggle_switch: ^2.0.1
   font_awesome_flutter: ^10.4.0
@@ -104,6 +105,7 @@ flutter:
     - assets/lang/
     - assets/svg/
     - assets/fonts/
+    - assets/onbording/
 
 
   fonts:
