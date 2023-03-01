@@ -11,7 +11,6 @@ import '../components/basic/custom_inkwell.dart';
 import '../components/basic/custom_text_filed.dart';
 
 class UplaodReset extends StatefulWidget {
-  static const routeName = 'change_user_password';
 
   const UplaodReset({Key? key}) : super(key: key);
 
@@ -32,11 +31,6 @@ class _ChangePassWord extends State<UplaodReset> {
   final _currentPassController = TextEditingController();
   final _newPassController = TextEditingController();
   final _newPass1Controller = TextEditingController();
-  bool _isObscure2 = true, _isObscure = true, _isObscure3 = true;
-  final _formKey = GlobalKey<FormState>();
-  late String _userPass;
-
-  late bool connected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +46,6 @@ class _ChangePassWord extends State<UplaodReset> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // CustomText(text: 'كلمة المرور القديمه',fontSize: 13,top: 30,bottom: 0,right: 15,left: 15,alignment: Alignment.centerRight,fontFamily: "f700",),
                 CustomeTextFiled(
                   top: 15,
                   right: 15,
@@ -60,7 +53,6 @@ class _ChangePassWord extends State<UplaodReset> {
                   hint: 'اسم المحل',
                   controller: _currentPassController,
                 ),
-                // CustomText(text: 'كلمة المرور الجديدة',fontSize: 13,top: 15,bottom: 0,right: 15,left: 15,alignment: Alignment.centerRight,fontFamily: "f700"),
                 CustomeTextFiled(
                   top: 15,
                   right: 15,
@@ -68,7 +60,6 @@ class _ChangePassWord extends State<UplaodReset> {
                   hint: 'حساب المحل',
                   controller: _newPassController,
                 ),
-                // CustomText(text:'تاكيد كلمة المرور الجديدة',fontSize: 13,top: 15,bottom: 0,right: 15,left: 15,alignment: Alignment.centerRight,fontFamily: "f700"),
                 CustomeTextFiled(
                   top: 15,
                   right: 15,
@@ -107,7 +98,6 @@ class _ChangePassWord extends State<UplaodReset> {
                     bottom: 15,
                     top: 40,
                     onTap: () {
-
                     }),
 
               ],
@@ -115,58 +105,5 @@ class _ChangePassWord extends State<UplaodReset> {
           ),
         ));
   }
-// validation() {
-//
-//   List<TextEditingController> _TextEditingControllerlist = [
-//     _newPassController,
-//     _newPass1Controller,_currentPassController
-//   ];
-//   if (!Validation.validateNotEmpty(_TextEditingControllerlist)) {
-//     HelperMethod.SnackBarWidget(context, "لابد من اكتمال جميع الحقول", Colors.red);
-//     return;
-//   }
-//
-//   if (!Validation.validatePassword(_newPassController)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرور قصيره جدا ", Colors.red);
-//     return;
-//   }
-//   if (!Validation.validateCurrentPassword(_currentPassController,_userPass)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرورغير متطابقه ", Colors.red);
-//     return;
-//   }
-//   if (!Validation.validateConFirmePassword(_newPassController,_newPass1Controller)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرورغير متطابقه ", Colors.red);
-//     return;
-//   }
-//
-//  apiCall();
-//
-//
-// }
 
-// apiCall() async {
-//   if (_formKey.currentState!.validate()) {
-//     HelperMethod.SnackBarWidget(context,   "جاري تعديل البيانات",Colors.green.shade300);
-//     await UserCubit.get(context).updatePassword(
-//         old_password: _currentPassController.text,
-//         new_password: _newPassController.text,
-//         new_password_confirmation: _newPass1Controller.text);
-//   }
-// }
-
-// diloge() async {
-//   showDialog(
-//       context: context,
-//       builder: (BuildContext context) {
-//         //
-//         return CustomDialog(
-//             titel: "تهانينا", subTitel: " تم تغير كلمة المرور بنجاح");
-//       });
-//   await Future.delayed(const Duration(milliseconds: 2000), () {
-//     // Navigator.pop(context);
-//     Navigator.of(context).push(MaterialPageRoute(builder: (co) {
-//       return Home();
-//     }));
-//   });
-// }
 }

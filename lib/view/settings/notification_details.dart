@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newflutterapp/view/components/app_bar/app_bar_widgit_without_back.dart';
-import 'package:newflutterapp/view/components/item_view/setting_item.dart';
-import 'package:newflutterapp/view/settings/services.dart';
+
 import '../../../data/utiles/app_colors.dart';
 import '../../data/utiles/app_image_path.dart';
 import '../../data/utiles/app_style.dart';
@@ -9,8 +7,7 @@ import '../components/app_bar/app_bar_widgit.dart';
 import '../components/basic/custom_inkwell.dart';
 import '../components/basic/custom_text.dart';
 import '../components/basic/custom_text_filed.dart';
-import 'NotificationView.dart';
-import 'SettingView.dart';
+
 
 class NotificationDetails extends StatefulWidget {
   final String projectId;
@@ -68,7 +65,7 @@ class _Folders extends State<NotificationDetails>  {
                 child:Column(
                   children: <Widget>[
                     Row(children: [
-                      Expanded(
+                      const     Expanded(
                         flex: 1,
                         child: CustomText(
                             alignment: AlignmentDirectional.centerStart,
@@ -76,7 +73,7 @@ class _Folders extends State<NotificationDetails>  {
                             style: AppStyleText.Text_700_15),
                       ),
                       Container( alignment: AlignmentDirectional.centerEnd,
-                        child: Row(children: [
+                        child: Row(children:const [
                           Icon(Icons.date_range,color: AppColors.textHint),
                           CustomText(
                               alignment: AlignmentDirectional.centerEnd,
@@ -85,7 +82,7 @@ class _Folders extends State<NotificationDetails>  {
                         ]),
                       ),
                     ]),
-                    CustomText(
+                    const   CustomText(
                       alignment: AlignmentDirectional.centerStart,
                       textAlign: TextAlign.center,
                       top: 2,
@@ -104,7 +101,7 @@ class _Folders extends State<NotificationDetails>  {
               right: 15,
               left: 15,
               fontSize: 10,
-              hint: 'ادخل عنوان النشاط',
+              hint: 'الرد',
               controller: _message,
               prefixicon: Icon(Icons.message_rounded),
             ),

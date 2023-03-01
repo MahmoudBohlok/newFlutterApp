@@ -11,7 +11,6 @@ import '../components/basic/custom_inkwell.dart';
 import '../components/basic/custom_text_filed.dart';
 
 class EditItinerary extends StatefulWidget {
-  static const routeName = 'change_user_password';
 
   const EditItinerary({Key? key}) : super(key: key);
 
@@ -53,7 +52,7 @@ class _ChangePassWord extends State<EditItinerary> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                CustomText(
+                const     CustomText(
                   text: 'من',
                   fontSize: 13,
                   top: 30,
@@ -84,7 +83,7 @@ class _ChangePassWord extends State<EditItinerary> {
                               name = !name;
                             });
                           },
-                          child: CustomText(
+                          child:const CustomText(
                             text: "تعديل من",
                             fontFamily: "f700",
                             fontSize: 14,
@@ -92,7 +91,7 @@ class _ChangePassWord extends State<EditItinerary> {
                             color: AppColors.bottonBackGround,
                           ))),
                 ]),
-                CustomText(
+                const    CustomText(
                   text: 'الي',
                   fontSize: 13,
                   top: 30,
@@ -124,7 +123,7 @@ class _ChangePassWord extends State<EditItinerary> {
                                 phone = !phone;
                               });
                             },
-                            child: CustomText(
+                            child: const CustomText(
                               text: "تعديل الي",
                               fontFamily: "f700",
                               left: 15,
@@ -133,7 +132,7 @@ class _ChangePassWord extends State<EditItinerary> {
                             ))),
                   ],
                 ),
-                CustomText(
+                const     CustomText(
                   text: 'المبلغ',
                   fontSize: 13,
                   top: 30,
@@ -165,7 +164,7 @@ class _ChangePassWord extends State<EditItinerary> {
                                 location = !location;
                               });
                             },
-                            child: CustomText(
+                            child:const CustomText(
                               text: "تعديل المبلغ",
                               fontFamily: "f700",
                               left: 15,
@@ -190,58 +189,5 @@ class _ChangePassWord extends State<EditItinerary> {
           ),
         ));
   }
-// validation() {
-//
-//   List<TextEditingController> _TextEditingControllerlist = [
-//     _newPassController,
-//     _newPass1Controller,_currentPassController
-//   ];
-//   if (!Validation.validateNotEmpty(_TextEditingControllerlist)) {
-//     HelperMethod.SnackBarWidget(context, "لابد من اكتمال جميع الحقول", Colors.red);
-//     return;
-//   }
-//
-//   if (!Validation.validatePassword(_newPassController)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرور قصيره جدا ", Colors.red);
-//     return;
-//   }
-//   if (!Validation.validateCurrentPassword(_currentPassController,_userPass)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرورغير متطابقه ", Colors.red);
-//     return;
-//   }
-//   if (!Validation.validateConFirmePassword(_newPassController,_newPass1Controller)) {
-//     HelperMethod.SnackBarWidget(context, "كلمه المرورغير متطابقه ", Colors.red);
-//     return;
-//   }
-//
-//  apiCall();
-//
-//
-// }
 
-// apiCall() async {
-//   if (_formKey.currentState!.validate()) {
-//     HelperMethod.SnackBarWidget(context,   "جاري تعديل البيانات",Colors.green.shade300);
-//     await UserCubit.get(context).updatePassword(
-//         old_password: _currentPassController.text,
-//         new_password: _newPassController.text,
-//         new_password_confirmation: _newPass1Controller.text);
-//   }
-// }
-
-// diloge() async {
-//   showDialog(
-//       context: context,
-//       builder: (BuildContext context) {
-//         //
-//         return CustomDialog(
-//             titel: "تهانينا", subTitel: " تم تغير كلمة المرور بنجاح");
-//       });
-//   await Future.delayed(const Duration(milliseconds: 2000), () {
-//     // Navigator.pop(context);
-//     Navigator.of(context).push(MaterialPageRoute(builder: (co) {
-//       return Home();
-//     }));
-//   });
-// }
 }

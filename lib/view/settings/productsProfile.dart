@@ -15,18 +15,9 @@ class Products extends StatefulWidget {
 }
 
 class _Folders extends State<Products> with SingleTickerProviderStateMixin {
-  late TabController _tabController;
-  final _tabs = [
-    Tab(child: CustomText(text:'اخر الخدمات' ,fontFamily: "f400",fontSize: 12,)),
-    Tab(child: CustomText(text:'الخدمات المفضله' ,fontFamily: "f300",fontSize: 11,)),
-    Tab(child: CustomText(text:'الاعدادات' ,fontFamily: "f400",fontSize: 12,)),
-
-  ];
-
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -53,11 +44,6 @@ class _Folders extends State<Products> with SingleTickerProviderStateMixin {
           ],
         ),
       )
-
-
-
-
-
         ,)
     );
   }

@@ -8,8 +8,6 @@ import 'package:onboarding/onboarding.dart';
 import '../../data/utiles/app_style.dart';
 import '../components/basic/custom_text.dart';
 
-
-
 class Onbording extends StatefulWidget {
   const Onbording({Key? key}) : super(key: key);
 
@@ -22,209 +20,206 @@ class _MyAppState extends State<Onbording> {
   late int index;
   final onboardingPagesList = [
     PageModel(
-      widget:
-         SingleChildScrollView(
-          controller: ScrollController(),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 50,left: 15,right: 15,bottom: 15),
-    child: SvgPicture.asset(height: 300,
-    "${ImagesSvg.Credit_card_bro}",
-
-
-    ),
-  ),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "ادفع كل ",
-                    fontFamily:"f800",
-                    fontSize: 22,                  ),
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "المشتريات",
-color: AppColors.bottonBackGround,
-                    fontFamily:"f800",
-                    fontSize: 22,
-                  ),
-                ],
+      widget: SingleChildScrollView(
+        controller: ScrollController(),
+        child: Column(
+          children: [
+            Padding(
+              padding:
+                  EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+              child: SvgPicture.asset(
+                height: 300,
+                "${ImagesSvg.Credit_card_bro}",
               ),
-      Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CustomText(
-            alignment: AlignmentDirectional.center,
-            top: 2,
-            text: " وانت ",
-            color: AppColors.bottonBackGround,
-            fontFamily:"f800",
-            fontSize: 22,                  ),
-          CustomText(
-            alignment: AlignmentDirectional.center,
-            top: 2,
-            text: "في البيت",
-            fontFamily:"f800",
-            fontSize: 22,
-          ),
-        ],
-      ),
-
-              CustomText(
-                alignment: AlignmentDirectional.center,
-                top: 10,
-                text: "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
-                style: AppStyleText.Text_400_11,
-              ),
-
-
-
-
-            ],
-          ),
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "ادفع كل ",
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "المشتريات",
+                  color: AppColors.bottonBackGround,
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: " وانت ",
+                  color: AppColors.bottonBackGround,
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "في البيت",
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+              ],
+            ),
+            const CustomText(
+              alignment: AlignmentDirectional.center,
+              top: 10,
+              text:
+                  "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
+              style: AppStyleText.Text_400_11,
+            ),
+          ],
         ),
-
+      ),
     ),
     PageModel(
       widget: SingleChildScrollView(
-          controller: ScrollController(),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 50,left: 15,right: 15,bottom: 15),
-               child: SvgPicture.asset(height: 300,
-  "${ImagesSvg.Credit_card}",
-                  ),
-             ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "ادفع كل ",
-                    fontFamily:"f800",
-                    fontSize: 22,                  ),
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "المشتريات",
-                    color: AppColors.bottonBackGround,
-                    fontFamily:"f800",
-                    fontSize: 22,
-                  ),
-                ],
+        controller: ScrollController(),
+        child: Column(
+          children: [
+            Padding(
+              padding:
+                  EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+              child: SvgPicture.asset(
+                height: 300,
+                "${ImagesSvg.Credit_card}",
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: " وانت ",
-                    color: AppColors.bottonBackGround,
-                    fontFamily:"f800",
-                    fontSize: 22,                  ),
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "في البيت",
-                    fontFamily:"f800",
-                    fontSize: 22,
-                  ),
-                ],
-              ),
-
-              CustomText(
-                alignment: AlignmentDirectional.center,
-                top: 10,
-                text: "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
-                style: AppStyleText.Text_400_11,
-              )
-            ],
-          ),
-
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "ادفع كل ",
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "المشتريات",
+                  color: AppColors.bottonBackGround,
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: " وانت ",
+                  color: AppColors.bottonBackGround,
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+                CustomText(
+                  alignment: AlignmentDirectional.center,
+                  top: 2,
+                  text: "في البيت",
+                  fontFamily: "f800",
+                  fontSize: 22,
+                ),
+              ],
+            ),
+            const CustomText(
+              alignment: AlignmentDirectional.center,
+              top: 10,
+              text:
+                  "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
+              style: AppStyleText.Text_400_11,
+            )
+          ],
+        ),
       ),
     ),
     PageModel(
-      widget:
-
-        SingleChildScrollView(
-          controller: ScrollController(),
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 50,left: 15,right: 15,bottom: 15),
-                child: SvgPicture.asset(height:300,
-  "${ImagesSvg.Credit_card_bro}",
-  ),
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "ادفع كل ",
-                    fontFamily:"f800",
-                    fontSize: 22,                  ),
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "المشتريات",
-                    color: AppColors.bottonBackGround,
-                    fontFamily:"f800",
-                    fontSize: 22,
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: " وانت ",
-                    color: AppColors.bottonBackGround,
-                    fontFamily:"f800",
-                    fontSize: 22,                  ),
-                  CustomText(
-                    alignment: AlignmentDirectional.center,
-                    top: 2,
-                    text: "في البيت",
-                    fontFamily:"f800",
-                    fontSize: 22,
-                  ),
-                ],
-              ),
-
+        widget: SingleChildScrollView(
+      controller: ScrollController(),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: 50, left: 15, right: 15, bottom: 15),
+            child: SvgPicture.asset(
+              height: 300,
+              "${ImagesSvg.Credit_card_bro}",
+            ),
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: const [
               CustomText(
                 alignment: AlignmentDirectional.center,
-                top: 10,
-                text: "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
-                style: AppStyleText.Text_400_11,
-              )
+                top: 2,
+                text: "ادفع كل ",
+                fontFamily: "f800",
+                fontSize: 22,
+              ),
+              CustomText(
+                alignment: AlignmentDirectional.center,
+                top: 2,
+                text: "المشتريات",
+                color: AppColors.bottonBackGround,
+                fontFamily: "f800",
+                fontSize: 22,
+              ),
             ],
           ),
-  )
-  )
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: const [
+              CustomText(
+                alignment: AlignmentDirectional.center,
+                top: 2,
+                text: " وانت ",
+                color: AppColors.bottonBackGround,
+                fontFamily: "f800",
+                fontSize: 22,
+              ),
+              CustomText(
+                alignment: AlignmentDirectional.center,
+                top: 2,
+                text: "في البيت",
+                fontFamily: "f800",
+                fontSize: 22,
+              ),
+            ],
+          ),
+          const CustomText(
+            alignment: AlignmentDirectional.center,
+            top: 10,
+            text: "عن طريق حارث تقدر تدفع كل المشتريات اونلاين وانت في البيت ",
+            style: AppStyleText.Text_400_11,
+          )
+        ],
+      ),
+    ))
   ];
 
   @override
@@ -267,8 +262,6 @@ color: AppColors.bottonBackGround,
           Navigator.push(context, MaterialPageRoute(builder: (context) {
             return NotificationScreen(projectId: "projectId");
           }));
-
-
         },
         child: const Padding(
           padding: defaultProceedButtonPadding,
@@ -283,45 +276,41 @@ color: AppColors.bottonBackGround,
 
   @override
   Widget build(BuildContext context) {
-    return
-      SafeArea(
-        child: Scaffold(
-          body: Onboarding(
-            pages: onboardingPagesList,
-            onPageChange: (int pageIndex) {
-              index = pageIndex;
-            },
-            startPageIndex: 0,
-            footerBuilder: (context, dragDistance, pagesLength, setIndex) {
-              return  Container(
-                  child: Padding(
-                    padding:  EdgeInsets.all(45.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [index == pagesLength - 1
-                          ? _signupButton
-                          : _skipButton(setIndex: setIndex),
-                        CustomIndicator(
-                          netDragPercent: dragDistance,
-                          pagesLength: pagesLength,
-                          indicator: Indicator(
-
-                    indicatorDesign: IndicatorDesign.polygon(
-                    polygonDesign: PolygonDesign(
-                      polygon: DesignType.polygon_circle,
-                    ),
-                  ),
-                )
-                        ),
-
-
-                      ],
-                    ),
-                  ),
-              );
-            },
-          ),
+    return SafeArea(
+      child: Scaffold(
+        body: Onboarding(
+          pages: onboardingPagesList,
+          onPageChange: (int pageIndex) {
+            index = pageIndex;
+          },
+          startPageIndex: 0,
+          footerBuilder: (context, dragDistance, pagesLength, setIndex) {
+            return Container(
+              child: Padding(
+                padding: EdgeInsets.all(45.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    index == pagesLength - 1
+                        ? _signupButton
+                        : _skipButton(setIndex: setIndex),
+                    CustomIndicator(
+                        netDragPercent: dragDistance,
+                        pagesLength: pagesLength,
+                        indicator: Indicator(
+                          indicatorDesign: IndicatorDesign.polygon(
+                            polygonDesign: PolygonDesign(
+                              polygon: DesignType.polygon_circle,
+                            ),
+                          ),
+                        )),
+                  ],
+                ),
+              ),
+            );
+          },
         ),
-      );
+      ),
+    );
   }
 }
