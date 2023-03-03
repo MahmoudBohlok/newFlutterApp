@@ -50,7 +50,15 @@ class _Folders extends State<NotificationView> {
                     padding: EdgeInsets.only(top: 16),
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
-                      return  NotificationItem();
+                      return  GestureDetector(
+                          onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                              return NotificationDetails(
+                                  projectId: "projectId");
+                            }));
+                      },
+                      child: NotificationItem());
                     },
                   )),
             ),

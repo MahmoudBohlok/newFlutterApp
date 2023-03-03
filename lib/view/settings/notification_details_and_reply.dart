@@ -9,16 +9,16 @@ import '../components/basic/custom_text.dart';
 import '../components/basic/custom_text_filed.dart';
 
 
-class NotificationDetails extends StatefulWidget {
-  final String projectId;
+class NotificationDetailsAndReply extends StatefulWidget {
 
-  const NotificationDetails({Key? key, required this.projectId}) : super(key: key);
+
+  const NotificationDetailsAndReply({Key? key}) : super(key: key);
 
   @override
-  State<NotificationDetails> createState() => _Folders();
+  State<NotificationDetailsAndReply> createState() => _Folders();
 }
 
-class _Folders extends State<NotificationDetails>  {
+class _Folders extends State<NotificationDetailsAndReply>  {
 
   final _message = TextEditingController();
 
@@ -96,6 +96,26 @@ class _Folders extends State<NotificationDetails>  {
               ),
 
             ),
+            CustomeTextFiled(
+              top: 5,
+              right: 15,
+              left: 15,
+              fontSize: 10,
+              hint: 'الرد',
+              controller: _message,
+              prefixicon: Icon(Icons.message_rounded),
+            ),
+            CustomInkWell(
+                text: "ارسال رد",
+                color: AppColors.bottonBackGround,
+                fontColor: AppColors.screenBackGround,
+                fontSize: 20,
+                fontFamily: "f700",
+                right: 40,
+                left: 40,
+                bottom: 15,
+                top: 40,
+                onTap: () {}),
           ],
         )
 

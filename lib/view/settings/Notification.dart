@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:newflutterapp/view/components/app_bar/app_bar_widgit_without_back.dart';
-import 'package:newflutterapp/view/components/item_view/setting_item.dart';
-import 'package:newflutterapp/view/settings/services.dart';
+import 'package:newflutterapp/view/settings/NotificationViewAndReply.dart';
 import '../../../data/utiles/app_colors.dart';
-import '../../data/utiles/app_image_path.dart';
-import '../../data/utiles/app_style.dart';
-import '../components/app_bar/app_bar_widgit.dart';
 import '../components/basic/custom_text.dart';
 import 'NotificationView.dart';
-import 'SettingView.dart';
 
 class NotificationScreen extends StatefulWidget {
   final String projectId;
@@ -67,7 +62,7 @@ class _Folders extends State<NotificationScreen>
       fontSize: 12,
     )),const Tab(
         child: CustomText(
-      text: 'الرد علي الاشعار',
+      text: 'خاصه',
       fontFamily: "f400",
       fontSize: 12,
     )),

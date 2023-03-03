@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newflutterapp/view/components/item_view/notification_item.dart';
-import 'package:newflutterapp/view/settings/notification_details.dart';
+import 'package:newflutterapp/view/settings/notification_details_and_reply.dart';
 import '../../../data/utiles/app_colors.dart';
 import '../../data/utiles/app_style.dart';
 import '../components/basic/custom_text.dart';
@@ -54,8 +54,8 @@ class _Folders extends State<NotificationViewAndReply> {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return NotificationDetails(
-                                  projectId: "projectId");
+                              return NotificationDetailsAndReply(
+                                   );
                             }));
                           },
                           child: NotificationItem());
