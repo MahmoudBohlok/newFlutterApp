@@ -5,14 +5,14 @@ import '../../../data/utiles/app_colors.dart';
 import '../../data/utiles/app_style.dart';
 import '../components/basic/custom_text.dart';
 
-class NotificationView extends StatefulWidget {
-  const NotificationView({Key? key}) : super(key: key);
+class NotificationViewAndReply extends StatefulWidget {
+  const NotificationViewAndReply({Key? key}) : super(key: key);
 
   @override
-  State<NotificationView> createState() => _Folders();
+  State<NotificationViewAndReply> createState() => _Folders();
 }
 
-class _Folders extends State<NotificationView> {
+class _Folders extends State<NotificationViewAndReply> {
   @override
   void initState() {
     super.initState();
@@ -50,7 +50,15 @@ class _Folders extends State<NotificationView> {
                     padding: EdgeInsets.only(top: 16),
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
-                      return  NotificationItem();
+                      return GestureDetector(
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return NotificationDetails(
+                                  projectId: "projectId");
+                            }));
+                          },
+                          child: NotificationItem());
                     },
                   )),
             ),

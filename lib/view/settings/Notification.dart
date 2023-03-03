@@ -65,6 +65,11 @@ class _Folders extends State<NotificationScreen>
       text: 'مواصلات',
       fontFamily: "f400",
       fontSize: 12,
+    )),const Tab(
+        child: CustomText(
+      text: 'الرد علي الاشعار',
+      fontFamily: "f400",
+      fontSize: 12,
     )),
   ];
 
@@ -121,6 +126,7 @@ class _Folders extends State<NotificationScreen>
                     NotificationView(),
                     NotificationView(),
                     NotificationView(),
+                    NotificationViewAndReply(),
                   ],
                 ),
               ))
